@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="utf-8"/>
+            <title>Cyber Bank</title>
+        </head>
+    <body>
+
+        <h1>Bem vindo ao Cyber Bank - Operação Concluida</h1>
+        <br/>
+        <h1>Dados da Conta</h1>
+        <table>
+            <tr>
+                <td>Nome</td> 
+                <td><%= conta[0].nome %></td>
+            </tr>    
+            <tr>    
+                <td>Número da conta</td>
+                <td><%= conta[0].numeroConta %></td>
+            </tr>    
+            <tr>
+                <td>Tipo de Conta</td>
+                <td><%= conta[0].tpConta %></td>
+            </tr>
+            <tr>
+                <td>Saldo Atual</td>
+                <td><%= conta[0].saldo %></td>
+            </tr>
+        </table>    
+        <h1>Operações</h1>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Operação</td>
+                <td>Valor</td>
+
+            </tr>
+            <% for(var i=0; i< histoper.length; i++) {%>
+                <tr>
+                    <td><%= histoper[i].idHistOperacao %></td>
+                    <td><%= histoper[i].tpOperacao %></td>
+                    <td><%= histoper[i].valorOperacao %></td>
+
+                </tr>
+
+            <% } %> 
+        </table>
+        <form action="/" method="post">
+            <input type="submit" value="Home" />    
+        </form>
+
+    </body>
+</html>

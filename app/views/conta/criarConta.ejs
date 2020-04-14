@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="utf-8"/>
+            <title>Cyber Bank</title>
+        </head>
+    <body>
+
+        <h1>Bem vindo ao Cyber Bank - Abrindo Conta</h1>
+        <br/>
+
+        <form action="/conta/salvar" method="post">
+            <input type="radio" id="tpConta" name="tpConta" value="1" checked> Conta Corrente
+            <input type="radio" id="tpConta" name="tpConta" value="2"> Conta Poupança
+            <br/>
+            <input type="text" id="numeroConta" name="numeroConta" placeholder="Informe o número da conta" required>
+            <br/>
+            <input type="text" id="nome" name="nome" placeholder="Informe o seu nome" required>
+            <br/>
+            <input type="submit" value="Salvar" />
+        </form>
+        <form action="/conta/cancelar" method="post">
+            <input type="submit" value="Cancelar" />    
+        </form>
+
+    </body>
+</html>
